@@ -40,6 +40,12 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
     <key>NSBluetoothAlwaysUsageDescription</key>
-    <string>I neeeeeeed bluetooth to work</string>
+    <string>This application requires bluetooth to communicate with the sensor devices</string>
+    <key>UIFileSharingEnabled</key>
+    <true/>
+    <key>LSSupportsOpeningDocumentsInPlace</key>
+    <true/>
+    <key>UIFileSharingEnabled</key>
+    <true/>
 </dict>
 </plist>
