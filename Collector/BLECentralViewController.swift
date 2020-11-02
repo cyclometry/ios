@@ -34,6 +34,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     @IBOutlet weak var baseTableView: UITableView!
     @IBOutlet weak var refreshButton: UIBarButtonItem!
     
+    let repository = SensorValRepository()
+    
     @IBAction func refreshAction(_ sender: AnyObject) {
         disconnectFromDevice()
         self.peripherals = []
@@ -261,6 +263,12 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         
         characteristicASCIIValue = ASCIIstring
         print("Value Recieved: \((characteristicASCIIValue as String))")
+        
+        // save to the local repository
+        let values = characteristicASCIIValue.components(separatedBy: ":")
+        let sensorVal = SensorVal(category: values[0], timestamp: Int64(values[1])!, value: values[2])
+        _ = repository.insert(sensorVal: sensorVal)
+        
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
     }
     

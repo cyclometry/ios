@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Basic Chat.xcodeproj">
+      location = "self:/Users/z002vbv/code/cyclometry/ios/Collector.xcodeproj">
    </FileRef>
 </Workspace>
