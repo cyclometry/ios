@@ -10,7 +10,7 @@
 		2AC34D362543B212004FB9F9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC34D332543B18C004FB9F9 /* libsqlite3.tbd */; };
 		2AC34D5A2543B566004FB9F9 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC34D452543B54C004FB9F9 /* SQLite.framework */; };
 		2AC34D5B2543B566004FB9F9 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC34D452543B54C004FB9F9 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2AC34D5E2543C137004FB9F9 /* SensorValRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC34D5D2543C137004FB9F9 /* SensorValRepository.swift */; };
+		2AC34D5E2543C137004FB9F9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC34D5D2543C137004FB9F9 /* Repository.swift */; };
 		2AC34D74254487FC004FB9F9 /* SensorValRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC34D73254487FC004FB9F9 /* SensorValRepositoryTest.swift */; };
 		D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657231DF2F4C8002B7557 /* UUIDKey.swift */; };
 		D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657251DF45E04002B7557 /* UartModuleViewController.swift */; };
@@ -98,7 +98,7 @@
 /* Begin PBXFileReference section */
 		2AC34D332543B18C004FB9F9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2AC34D3A2543B54C004FB9F9 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = ../../ios/SQLite.swift/SQLite.xcodeproj; sourceTree = "<group>"; };
-		2AC34D5D2543C137004FB9F9 /* SensorValRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorValRepository.swift; sourceTree = "<group>"; };
+		2AC34D5D2543C137004FB9F9 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2AC34D71254487FC004FB9F9 /* CollectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC34D73254487FC004FB9F9 /* SensorValRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorValRepositoryTest.swift; sourceTree = "<group>"; };
 		2AC34D75254487FC004FB9F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 				D5B24DE21DEE393B00D33B5A /* Assets.xcassets */,
 				D5B24DE41DEE393B00D33B5A /* LaunchScreen.storyboard */,
 				D5B24DE71DEE393B00D33B5A /* Info.plist */,
-				2AC34D5D2543C137004FB9F9 /* SensorValRepository.swift */,
+				2AC34D5D2543C137004FB9F9 /* Repository.swift */,
 			);
 			path = Collector;
 			sourceTree = "<group>";
@@ -378,7 +378,7 @@
 				D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */,
 				D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */,
 				D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */,
-				2AC34D5E2543C137004FB9F9 /* SensorValRepository.swift in Sources */,
+				2AC34D5E2543C137004FB9F9 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
