@@ -264,12 +264,16 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         characteristicASCIIValue = ASCIIstring
         print("Value Received: \((characteristicASCIIValue as String))")
         
-        // save to the local repository
-        let values = characteristicASCIIValue.components(separatedBy: ":")
-        // todo use real activityId
-        let sensorVal = SensorVal(activityId: 1, category: values[0], elapsedMs: Int64(values[1])!, value: values[2])
-        _ = repository.insertSensorVal(sensorVal: sensorVal)
-        
+        let metricGroups = characteristicASCIIValue.components(separatedBy: ";")
+        for metricGroup in metricGroups {
+            print("metric group: \((metricGroup as String))")
+            // save to the local repository
+            let fields = metricGroup.components(separatedBy: ":")
+            // todo use real activityId
+            let sensorVal = SensorVal(activityId: 1, category: fields[0], elapsedMs: Int64(fields[1])!, value: fields[2])
+            _ = repository.insertSensorVal(sensorVal: sensorVal)
+        }
+                
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
     }
     
